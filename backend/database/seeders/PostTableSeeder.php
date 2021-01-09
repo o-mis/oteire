@@ -15,7 +15,6 @@ class PostTableSeeder extends Seeder
     public function run()
     {
         // ポストを15個作成する
-        factory(Post::class, 15)->create();
         \App\Models\Post::factory(10)->create();
     }
 }

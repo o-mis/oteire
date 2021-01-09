@@ -10,6 +10,10 @@ RUN apt-get update && \
   # 圧縮されたphp拡張ライブラリを解凍して使用する
   docker-php-ext-install intl pdo_mysql zip bcmath
 
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+  apt-get update && \
+  apt-get install -y nodejs
+
 COPY ./php.ini /usr/local/etc/php/php.ini
 
 WORKDIR /work
