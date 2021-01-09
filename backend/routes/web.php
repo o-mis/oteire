@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'oteire';
+});
+
+// ポスト一覧画面表示
+Route::get('/posts', 'App\Http\Controllers\PostController@index');
+
+Route::get('/info', function() {
+    return view('information');
 });
