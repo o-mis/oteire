@@ -1,6 +1,6 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Browser Sessions') }}
+        {{ __('ブラウザのセッション情報') }}
     </x-slot>
 
     <x-slot name="description">
@@ -9,7 +9,7 @@
 
     <x-slot name="content">
         <div class="max-w-xl text-sm text-gray-600">
-            {{ __('If necessary, you may logout of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.') }}
+            {{ __('必要に応じて、すべてのデバイスで他のすべてのブラウザセッションをログアウトすることができます。最近のセッションの一部を以下に示しますが、このリストはすべてを網羅しているわけではありません。アカウントが危険にさらされていると思われる場合は、パスワードも更新してください。') }}
         </div>
 
         @if (count($this->sessions) > 0)
@@ -53,7 +53,7 @@
 
         <div class="flex items-center mt-5">
             <x-jet-button wire:click="confirmLogout" wire:loading.attr="disabled">
-                {{ __('Logout Other Browser Sessions') }}
+                {{ __('ブラウザセッションを削除する') }}
             </x-jet-button>
 
             <x-jet-action-message class="ml-3" on="loggedOut">

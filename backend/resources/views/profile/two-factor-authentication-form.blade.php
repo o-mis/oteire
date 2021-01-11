@@ -1,6 +1,6 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Two Factor Authentication') }}
+        {{ __('2段階認証') }}
     </x-slot>
 
     <x-slot name="description">
@@ -10,15 +10,15 @@
     <x-slot name="content">
         <h3 class="text-lg font-medium text-gray-900">
             @if ($this->enabled)
-                {{ __('You have enabled two factor authentication.') }}
+                {{ __('2段階認証が有効になっています') }}
             @else
-                {{ __('You have not enabled two factor authentication.') }}
+                {{ __('2段階認証が有効になっていません') }}
             @endif
         </h3>
 
         <div class="mt-3 max-w-xl text-sm text-gray-600">
             <p>
-                {{ __('When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone\'s Google Authenticator application.') }}
+                {{ __('二要素認証を有効にすると、認証中に安全なランダムなトークンの入力を求められます。このトークンは、お使いの携帯電話のGoogle Authenticatorアプリケーションから取得することができます。') }}
             </p>
         </div>
 
@@ -54,7 +54,7 @@
             @if (! $this->enabled)
                 <x-jet-confirms-password wire:then="enableTwoFactorAuthentication">
                     <x-jet-button type="button" wire:loading.attr="disabled">
-                        {{ __('Enable') }}
+                        {{ __('有効にする') }}
                     </x-jet-button>
                 </x-jet-confirms-password>
             @else
@@ -74,7 +74,7 @@
 
                 <x-jet-confirms-password wire:then="disableTwoFactorAuthentication">
                     <x-jet-danger-button wire:loading.attr="disabled">
-                        {{ __('Disable') }}
+                        {{ __('無効にする') }}
                     </x-jet-danger-button>
                 </x-jet-confirms-password>
             @endif
