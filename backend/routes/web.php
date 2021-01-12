@@ -18,11 +18,11 @@ Route::get('/', function () {
 });
 
 // ポスト一覧画面表示
-Route::get('/posts', 'App\Http\Controllers\PostController@index');
+// Route::get('/posts', 'App\Http\Controllers\PostController@index');
 
-Route::get('/info', function() {
-    return view('information');
-});
+// Route::get('/info', function() {
+//     return view('information');
+// });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
