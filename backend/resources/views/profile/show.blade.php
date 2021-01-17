@@ -1,3 +1,9 @@
+{{-- x- を持つタグはbladeのコンポーネントであることを示す --}}
+{{-- x-app-layout はview/layouts/app.bladeファイルに対応 --}}
+
+{{-- $slot部分にこのファイルの<x-app-layout>タグ内部のコンテンツが表示される --}}
+
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">

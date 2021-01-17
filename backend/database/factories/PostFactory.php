@@ -22,6 +22,7 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
+            // テスト用インスタンス設定
             'title' => $this->faker->title,
             'content' => $this->faker->realText,
         ];
