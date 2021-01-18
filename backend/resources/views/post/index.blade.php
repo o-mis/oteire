@@ -36,6 +36,9 @@
       <div>
         {{ $post->content }}
       </div>
+      <div>
+      <a href="/posts/{{ $post->id }}" class="btn">詳しく見る</a>
+      </div>
     @empty
         <div>投稿がありません</div>
     @endforelse
