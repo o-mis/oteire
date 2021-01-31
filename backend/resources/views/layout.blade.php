@@ -11,8 +11,7 @@
   </head>
   <body>
     <div>
-      <button type="button" class="btn btn-primary">Primary</button>
-      {{-- @yield('content') --}}
+      @yield('content')
     </div>
   </body>
 </html>

@@ -1,6 +1,7 @@
 @extends('layout')
 
-@section('title', '新規投稿 | oteire')
+{{-- @section('title', '新規投稿 | oteire') --}}
+@section('content')
   <div>
     <form action="{{ url('posts') }}" method="POST">
       @csrf
@@ -16,3 +17,4 @@
         <button type="submit" name="submit">投稿する</button>
     </form>
   </div>
+@endsection

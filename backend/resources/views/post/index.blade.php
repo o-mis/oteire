@@ -1,5 +1,4 @@
 @extends('layout')
-@section('title', '投稿 | oteire')
 
 {{-- bladeはphpコードを含むことが出来るテンプレートエンジン --}}
 
@@ -20,6 +19,7 @@
     @endforeach
   </div> --}}
 
+@section('content')
   <div>
     <a href="/posts/create" class="btn">投稿を作成する</a>
   </div>
@@ -44,4 +44,5 @@
     @empty
         <div>投稿がありません</div>
     @endforelse
-  </>
+  </div>
+@endsection
