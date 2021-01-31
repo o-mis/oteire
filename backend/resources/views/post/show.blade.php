@@ -16,7 +16,10 @@
   </div>
   <div>
     <a href="{{ url('posts/'.$post->id.'/edit') }}">編集する</a>
-    <a href="">削除</a>
+  <form action="{{ route('posts.destroy', $post->id ) }}" method="POST">
+    @csrf
+    @method('DELETE')
+    <input type="submit" name="" value="削除する">
   </div>
 </div>
 @endsection
