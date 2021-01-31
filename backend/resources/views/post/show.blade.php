@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', '{{ $post->title }} | oteire')
+@section('title', '投稿詳細 | oteire')
 
 <div class="uk-container">
   <div>

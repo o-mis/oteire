@@ -20,6 +20,21 @@ class PostController extends Controller
         ['posts' => $posts]);
     }
 
+    public function create()
+    {
+        return view('post.create');
+    }
+
+    public function store(Request $request) {
+
+        $post = new Post;
+        $post->title = $request->title;
+        $post->content = $request->content;
+        $post->save();
+
+        return redirect('/posts')->with('message', '投稿ができたよ');
+    }
+
     public function show($id)
     {
         $post = Post::find($id);
