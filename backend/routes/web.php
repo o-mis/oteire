@@ -13,19 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
 Route::get('/', function () {
     return view('layouts.app');
 });
 
-// ポスト一覧画面表示
-// Route::get('/posts', 'App\Http\Controllers\PostController@index');
-
 Route::resource('posts', 'App\Http\Controllers\PostController');
-
-// Route::get('/info', function() {
-//     return view('information');
-// });
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');

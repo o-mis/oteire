@@ -1,6 +1,6 @@
 @extends('layout')
-@section('title', '投稿詳細 | oteire')
 
+@section('content')
 <div class="uk-container">
   <div>
     {{ $post->id }}
@@ -15,6 +15,8 @@
     {{ $post->content }}
   </div>
   <div>
-    <a href="" class="btn">削除</a>
+    <a href="{{ url('posts/'.$post->id.'/edit') }}">編集する</a>
+    <a href="">削除</a>
   </div>
 </div>
+@endsection

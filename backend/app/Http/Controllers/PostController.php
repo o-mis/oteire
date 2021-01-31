@@ -40,4 +40,20 @@ class PostController extends Controller
         $post = Post::find($id);
         return view('post.show', compact('post'));
     }
+
+    public function edit($id)
+    {
+        $post = Post::find($id);
+        return view('post.edit', compact('post'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $post = Post::find($id);
+        $post->title = $request->title;
+        $post->content = $request->content;
+        $post->save();
+
+        return redirect('/posts/'.$post->id)->with('message', '編集ができたみたい');
+    }
 }
