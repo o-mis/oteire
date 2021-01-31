@@ -20,8 +20,7 @@ Route::get('/', function () {
 // ポスト一覧画面表示
 // Route::get('/posts', 'App\Http\Controllers\PostController@index');
 
-Route::resource('posts', 'App\Http\Controllers\PostController', ['only' => ['index', 'create', 'show', 'delete']]);
-
+Route::resource('posts', 'App\Http\Controllers\PostController');
 
 // Route::get('/info', function() {
 //     return view('information');

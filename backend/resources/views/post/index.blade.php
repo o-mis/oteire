@@ -1,4 +1,3 @@
-ここに投稿一覧を表示する
 @extends('layout')
 @section('title', '投稿 | oteire')
 
@@ -21,6 +20,9 @@
     @endforeach
   </div> --}}
 
+  <div>
+    <a href="/posts/create" class="btn">投稿を作成する</a>
+  </div>
   <div class="uk-container">
     {{-- forelse,emptyを使うとデータがからのときの処理もできる --}}
     @forelse ($posts as $post)
@@ -42,4 +44,4 @@
     @empty
         <div>投稿がありません</div>
     @endforelse
-  </div>
+  </>
