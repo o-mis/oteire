@@ -56,4 +56,13 @@ class PostController extends Controller
 
         return redirect('/posts/'.$post->id)->with('message', '編集ができたみたい');
     }
+
+    public function destroy($id)
+    {
+        // $post = Post::find($id);
+        // $post->delete();
+        Post::where('id', $id)->delete();
+
+        return redirect('/posts');
+    }
 }
