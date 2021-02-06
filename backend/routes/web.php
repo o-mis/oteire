@@ -21,4 +21,4 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 
-Route::resource('posts', 'App\Http\Controllers\PostController');
+Route::resource('/post', 'App\Http\Controllers\PostController');

@@ -12,9 +12,14 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-20 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('oteireとは') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-1 sm:flex">
+                    <x-jet-nav-link href="{{ route('post.index') }}" :active="request()->routeIs('post.index')">
+                        {{ __('投稿一覧') }}
                     </x-jet-nav-link>
                 </div>
             </div>
